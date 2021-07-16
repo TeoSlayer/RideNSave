@@ -12,7 +12,7 @@ struct TextFieldCustom: View {
     var placeholder : String
     var body: some View {
         ZStack{
-            Rectangle().foregroundColor(.secondary)
+            Rectangle().foregroundColor(Color(Color.RGBColorSpace.sRGB, red: 0.08, green: 0.08, blue: 0.10, opacity: 1.0))
             TextField("", text: $text).foregroundColor(.accentColor)
                 .placeholder(when: text.isEmpty) {
                     Text(placeholder).foregroundColor(.accentColor)

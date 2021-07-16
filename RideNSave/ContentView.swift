@@ -10,12 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var userData : UserData
     var body: some View {
+
         if(userData.loggedIn){
-            Home().background(Color("Background")).environmentObject(LocationManager.shared)
+            MapHome().background(Color("Background")).environmentObject(LocationManager.shared)
         }
         if(!userData.loggedIn){
-            Authentification()
+            Authentification().environmentObject(UserData.shared)
         }
+        
+        
     }
 }
 
