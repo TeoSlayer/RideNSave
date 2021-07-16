@@ -7,6 +7,7 @@ target 'RideNSave' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+  pod 'PermissionsSwiftUI'
   # Pods for RideNSave
 
   target 'RideNSaveTests' do

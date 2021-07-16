@@ -10,10 +10,12 @@ import Firebase
 
 @main
 struct RideNSaveApp: App {
+    // or .dark
+
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(UserData.shared).environment(\.colorScheme, .dark) 
         }
     }
 }
@@ -21,6 +23,8 @@ struct RideNSaveApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
       FirebaseApp.configure()
+       
+
       return true
     }
 }
